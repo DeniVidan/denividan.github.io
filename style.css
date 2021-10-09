@@ -1,0 +1,107 @@
+*{
+    font-family: 'Courier New', Courier, monospace;
+}
+body{
+    background-color: rgb(21, 21, 21);
+}
+a{
+    text-decoration: none;
+    color:white;
+    background-color: transparent;
+}
+.all{
+    margin: 20px 10px;
+    border: 1px solid rgb(95, 95, 95);
+    border-radius: 10px;
+    
+}
+.container{
+    width: 400px !important;
+}
+
+.title{
+    font-size: 60px;
+    padding: 20px;
+    color: white;
+    writing-mode: vertical-rl;
+    text-orientation: upright;
+}
+
+.menu{
+    display: flex;
+    flex-direction: column;
+    width: 200px;
+    padding: 0 0 0 0;
+    color: white;
+    text-align: center;
+    border-right: 1px solid white;
+}
+.row{
+    display: flex;
+    flex-direction: row;
+}
+.select{
+    margin: 10px 10px !important;
+    padding: 10px 10px;
+    font-size: 22px;
+    transition: all 0.1s ease-in-out;
+}
+.select:hover{
+    font-size: 23px;
+    background-color: rgb(36, 36, 36);
+    border-radius: 10px;
+}
+
+.tekst{
+    font-size: 20px;
+    margin: 100px 100px;
+    color: white;
+    line-height: 40px;
+    align-self: center;
+}
+p{
+    display: flex;
+    justify-content: center;
+}
+.col-md-4{
+    align-self: center;
+}
+.col-md-2{
+    justify-content: center;
+}
+
+.slika{
+    transition: 0.1s ease-in-out;
+}
+
+.slika:hover{
+    width: 210px;
+}
+@media screen and (max-width: 1100px) {
+    .row{
+        display: flex;
+        flex-direction: row;
+    }
+    .col-md-6{
+        align-self: center;
+    }
+    .tekst{
+        margin: 40px 40px;
+    }
+}
+
+@media screen and (max-width: 1100px) {
+    .title{
+        writing-mode: horizontal-tb;
+        font-size: 55px;
+    }
+    .menu{
+        border-right: none;
+        border-top: 1px solid white;
+        justify-content: start;
+    }
+    .row{
+        flex-direction: column;
+    }
+
+}

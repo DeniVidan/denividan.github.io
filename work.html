@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+
+    <style>
+    *{
+        font-family: 'Courier New', Courier, monospace;
+    }
+    html{
+        overflow-x: hidden;
+    }
+    body{
+        overflow-x: hidden;
+        background-color: rgb(21, 21, 21);
+    }
+    a{
+        text-decoration: none;
+        color:white;
+        background-color: transparent;
+    }
+
+    .all{
+        margin: 20px 10px;
+        border: 1px solid rgb(95, 95, 95);
+        border-radius: 10px;
+        
+    }
+    .container{
+        width: 400px !important;
+    }
+
+    .title{
+        font-size: 60px;
+        padding: 20px;
+        color: white;
+        writing-mode: vertical-rl;
+        text-orientation: upright;
+    }
+
+    .menu{
+        display: flex;
+        flex-direction: column;
+        width: 200px;
+        padding: 0 0 0 0;
+        color: white;
+        text-align: center;
+        border-right: 1px solid white;
+    }
+    .row1{
+        display: flex;
+        flex-direction: row1;
+    }
+    .row2{
+        justify-content: center;
+        align-self: center;
+    }
+    .select{
+        margin: 10px 10px !important;
+        padding: 10px 10px;
+        font-size: 22px;
+        transition: all 0.1s ease-in-out;
+    }
+    .select:hover{
+        font-size: 23px;
+        background-color: rgb(36, 36, 36);
+        border-radius: 10px;
+    }
+
+    .tekst{
+        font-size: 20px;
+        margin: 100px 100px;
+        color: white;
+        line-height: 40px;
+        align-self: center;
+    }
+    p{
+        display: flex;
+        justify-content: center;
+    }
+    .col-md-4{
+        align-self: center;
+    }
+    .col-md-2{
+        justify-content: center;
+    }
+
+    .slika{
+        transition: 0.1s ease-in-out;
+    }
+
+    .slika:hover{
+        width: 210px;
+    }
+
+    .card{
+        background-color: rgb(28, 28, 28);
+        padding: 20px;
+        /* border: 1px solid grey; */
+        border-radius: 10px;
+        margin-top: 20px;
+        margin-bottom: 20px;
+        margin-left: 60px;
+        transition: transform 0.3s ease-out;
+    }
+    .cardBody{
+        width: 200px;
+    }
+    .card:hover{
+        transform: scale(1.1);
+    }
+    .cardTitle{
+        font-size: 20px;
+        padding-bottom: 10px;
+        background-color: transparent;
+        color: white;
+        border-bottom: 1px solid grey;
+    }
+    .cardText{
+        color: rgb(165, 165, 165) !important;
+        font-size: 18px;
+        padding-top: 10px;
+        background-color: transparent;
+        color: white;
+        line-height: 30px;
+    }
+    @media screen and (max-width: 1100px) {
+        .row1{
+            display: flex;
+            flex-direction: row1;
+        }
+        .col-md-6{
+            align-self: center;
+        }
+        .tekst{
+            margin: 40px 40px;
+        }
+    }
+
+    @media screen and (max-width: 1100px) {
+        .title{
+            writing-mode: horizontal-tb;
+            font-size: 55px;
+        }
+        .menu{
+            border-right: none;
+            border-top: 1px solid white;
+            justify-content: start;
+        }
+        .row1{
+            flex-direction: column;
+        }
+        .card{
+            margin-left: 0px;
+            padding-left: 115px;
+            padding-right: 115px;
+        }
+    }
+    </style>
+</head>
+<body>
+    <div class="all">
+        <div class="row row1">
+            <div class="col-md-2" style="display: flex; flex-direction: row1 !important;">
+                <!-- <div class="container"> -->
+                    <div class="title">
+                        DENI VIDAN
+                    </div>
+                </div>
+            <div class="col-md-4">
+                    <!-- <hr style="margin: 0px 30px;"> -->
+                    <div class="menu">
+                        <a href="index.html"><div class="select">UPOZNAJ ME</div></a>
+                        <a href="work.html"><div class="select">DJELA</div></a>
+                        <a href="kontakt.html"><div class="select">KONTAKT</div></a>
+                    </div>
+                </div>
+                <!-- </div> -->
+            
+
+            <div class="col-md-6" style="display: flex; flex-direction: row1;">
+                <div class="row row2">
+                    <div class="card">
+                        <div class="cardBody">
+                            <div class="cardTitle">WEB STRANICA</div>
+
+                            <div class="cardText">Frontend stranica za rezervacije apartmana</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
