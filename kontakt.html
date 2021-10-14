@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -8,151 +9,203 @@
 
 
     <style>
-    *{
-        /* background-color: rgb(21, 21, 21); */
-        font-family: 'Courier New', Courier, monospace;
-    }
-    body{
-        background-color: rgb(21, 21, 21);
-    }
+        * {
+            /* background-color: rgb(21, 21, 21); */
+            font-family: 'Courier New', Courier, monospace;
+        }
 
-    a{
-        text-decoration: none;
-        color:white;
-        background-color: transparent;
-    }
+        body {
+            background-color: rgb(21, 21, 21);
+        }
 
-    .all{
-        margin: 20px 10px;
-        border: 1px solid rgb(95, 95, 95);
-        border-radius: 10px;
-        
-    }
-    .container{
-        width: 400px !important;
-    }
+        a {
+            text-decoration: none;
+            color: white;
+            background-color: transparent;
+        }
 
-    .title{
-        font-size: 60px;
-        padding: 20px;
-        color: white;
-        writing-mode: vertical-rl;
-        text-orientation: upright;
-    }
+        .all {
+            margin: 20px 10px;
+            border: 1px solid rgb(95, 95, 95);
+            border-radius: 10px;
 
-    .menu{
-        display: flex;
-        flex-direction: column;
-        width: 200px;
-        padding: 0 0 0 0;
-        color: white;
-        text-align: center;
-        border-right: 1px solid white;
-    }
-    .row{
-        display: flex;
-        flex-direction: row;
-    }
-    .select{
-        margin: 10px 10px !important;
-        padding: 10px 10px;
-        font-size: 22px;
-        transition: all 0.1s ease-in-out;
-    }
-    .select:hover{
-        font-size: 23px;
-        background-color: rgb(36, 36, 36);
-        border-radius: 10px;
-    }
+        }
 
-    .tekst{
-        font-size: 20px;
-        margin: 100px 100px;
-        color: white;
-        line-height: 40px;
-        align-self: center;
-    }
-    p{
-        display: flex;
-        justify-content: center;
-    }
-    .col-md-4{
-        align-self: center;
-    }
-    .col-md-2{
-        justify-content: center;
-    }
+        .container {
+            width: 400px !important;
+        }
 
-    .slika{
-        transition: 0.1s ease-in-out;
-    }
+        .title {
+            font-size: 60px;
+            padding: 20px;
+            color: white;
+            writing-mode: vertical-rl;
+            text-orientation: upright;
+        }
 
-    .slika:hover{
-        width: 210px;
-    }
-    @media screen and (max-width: 1100px) {
-        .row{
+        .menu {
+            display: flex;
+            flex-direction: column;
+            width: 200px;
+            padding: 0 0 0 0;
+            color: white;
+            text-align: center;
+            border-right: 1px solid white;
+        }
+
+        .row {
             display: flex;
             flex-direction: row;
         }
-        .col-md-6{
+
+        .select {
+            margin: 10px 10px !important;
+            padding: 10px 10px;
+            font-size: 22px;
+            transition: all 0.1s ease-in-out;
+        }
+
+        .select:hover {
+            font-size: 23px;
+            background-color: rgb(36, 36, 36);
+            border-radius: 10px;
+        }
+
+        .tekst {
+            font-size: 20px;
+            margin: 100px 100px;
+            color: white;
+            line-height: 40px;
             align-self: center;
         }
-        .tekst{
-            margin: 40px 40px;
-        }
-    }
 
-    @media screen and (max-width: 1100px) {
-        .title{
-            writing-mode: horizontal-tb;
-            font-size: 55px;
+        p {
+            margin-top: 0;
+            margin-bottom: 0;
+            display: flex;
+            justify-content: center;
         }
-        .menu{
-            border-right: none;
-            border-top: 1px solid white;
-            justify-content: start;
-        }
-        .row{
-            flex-direction: column;
-        }
-    }
 
-    @media screen and (max-width: 1100px) {
-        .tekst{
-            margin-left: 0px;
-            margin-right: 0px;
+        .col-md-4 {
+            align-self: center;
         }
-    }
+
+        .col-md-2 {
+            justify-content: center;
+        }
+
+        .slika {
+            transition: 0.1s ease-in-out;
+        }
+
+        .slika:hover {
+            width: 210px;
+        }
+
+        ::placeholder{
+            color:white;
+            opacity: 0.3;
+        }
+        input{
+            background-color: rgb(21, 21, 21);
+            box-shadow: none;
+            border: 1px solid white;
+            color: white;
+            border-radius: 7px;
+            padding: 10px;
+            margin-top: 5px;
+        }
+        textarea{
+            background-color: rgb(21, 21, 21);
+            color: white;
+            border-radius: 7px;
+            padding: 10px;
+            margin-top: 5px;
+        }
+
+        @media screen and (max-width: 1100px) {
+            .row {
+                display: flex;
+                flex-direction: row;
+            }
+
+            .col-md-6 {
+                align-self: center;
+            }
+
+            .tekst {
+                margin: 40px 40px;
+            }
+        }
+
+        @media screen and (max-width: 1100px) {
+            .title {
+                writing-mode: horizontal-tb;
+                font-size: 55px;
+            }
+
+            .menu {
+                border-right: none;
+                border-top: 1px solid white;
+                justify-content: start;
+            }
+
+            .row {
+                flex-direction: column;
+            }
+        }
+
+        @media screen and (max-width: 1100px) {
+            .tekst {
+                margin-left: 0px;
+                margin-right: 0px;
+            }
+        }
     </style>
 </head>
+
 <body>
     <div class="all">
         <div class="row">
             <div class="col-md-2" style="display: flex; flex-direction: row !important;">
                 <!-- <div class="container"> -->
-                    <div class="title">
-                        DENI VIDAN
-                    </div>
+                <div class="title">
+                    DENI VIDAN
                 </div>
+            </div>
             <div class="col-md-4">
-                    <!-- <hr style="margin: 0px 30px;"> -->
-                    <div class="menu">
-                        <a href="index.html"><div class="select">UPOZNAJ ME</div></a>
-                        <a href="work.html"><div class="select">DJELA</div></a>
-                        <a href="kontakt.html"><div class="select">KONTAKT</div></a>
-                    </div>
+                <!-- <hr style="margin: 0px 30px;"> -->
+                <div class="menu">
+                    <a href="index.html">
+                        <div class="select">UPOZNAJ ME</div>
+                    </a>
+                    <a href="work.html">
+                        <div class="select">DJELA</div>
+                    </a>
+                    <a href="kontakt.html">
+                        <div class="select">KONTAKT</div>
+                    </a>
                 </div>
-                <!-- </div> -->
-            
+            </div>
+            <!-- </div> -->
+
 
             <div class="col-md-6" style="display: flex; flex-direction: row;">
                 <div class="tekst">
                     <p>Telefon: +385 99123456</p>
-                    <p>E-mail: imeprezime@gmail.com</p>
+                    <p>
+                        <form action="https://formsubmit.co/denividan@gmail.com" method="post"><br>
+                            <input type="firstname" class="feedback-input" placeholder="Ime"><br>
+                            <input type="lastname" class="feedback-input" placeholder="prezime"><br>
+                            <input type="email" class="feedback-input" placeholder="e-pošta"><br>
+                            <textarea name="text" id="feedback-input" placeholder="Recite..." required></textarea><br>
+                            <input type="submit" style="color: white;">
+                        </form>
+                    </p>
                 </div>
             </div>
         </div>
     </div>
 </body>
+
 </html>
