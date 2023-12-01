@@ -213,15 +213,19 @@
 
 /*--------------- SKILL SECTION ------------*/
 .skill-wrapper {
-
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: center;
 }
 .skill-item {
     display: flex;
     justify-content: space-between;
     width: 300px;
     background-color: #22242B;
-    padding: 10px;
+    padding: 20px 10px;
     margin: 10px;
+    border-radius: 7px;
 }
 .skill-image {
     display: block;
@@ -319,6 +323,11 @@
         height: 450px;
     }
   }
+  @media only screen and (max-width: 679px) {
+    .section-two {
+        padding: 10px;
+    }
+  }
   @media only screen and (max-width: 600px) {
     .hero-circle {
         width: 350px;
@@ -329,11 +338,20 @@
         padding-top: 150px;
         margin-bottom: -50px;
     }
+    .section-two {
+        padding: 0px;
+    }
     .navbar-title {
         padding-left: 0%;
     }
     .hero-img {
         min-width: 350px;
 
+    }
+    .text-size-medium {
+        font-size: 35px;
+    }
+    .text-size-huge {
+        font-size: 85px;
     }
   }
