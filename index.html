@@ -1,154 +1,164 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-
-    <style>
-        *{
-            font-family: 'Courier New', Courier, monospace;
-        }
-        body{
-            background-color: rgb(21, 21, 21);
-        }
-        a{
-            text-decoration: none;
-            color:white;
-            background-color: transparent;
-        }
-        .all{
-            margin: 20px 10px;
-            border: 1px solid rgb(95, 95, 95);
-            border-radius: 10px;
-            
-        }
-        .container{
-            width: 400px !important;
-        }
-
-        .title{
-            font-size: 60px;
-            padding: 20px;
-            color: white;
-            writing-mode: vertical-rl;
-            text-orientation: upright;
-        }
-
-        .menu{
-            display: flex;
-            flex-direction: column;
-            width: 200px;
-            padding: 0 0 0 0;
-            color: white;
-            text-align: center;
-            border-right: 1px solid white;
-        }
-        .row{
-            display: flex;
-            flex-direction: row;
-        }
-        .select{
-            margin: 10px 10px !important;
-            padding: 10px 10px;
-            font-size: 22px;
-            transition: all 0.1s ease-in-out;
-        }
-        .select:hover{
-            font-size: 23px;
-            background-color: rgb(36, 36, 36);
-            border-radius: 10px;
-        }
-
-        .tekst{
-            font-size: 20px;
-            margin: 100px 100px;
-            color: white;
-            line-height: 40px;
-            align-self: center;
-        }
-        p{
-            display: flex;
-            justify-content: center;
-        }
-        .col-md-4{
-            align-self: center;
-        }
-        .col-md-2{
-            justify-content: center;
-        }
-
-        .slika{
-            transition: 0.1s ease-in-out;
-            opacity: 0.8;
-        }
-
-        .slika:hover{
-            width: 210px;
-        }
-        @media screen and (max-width: 1100px) {
-            .row{
-                display: flex;
-                flex-direction: row;
-            }
-            .col-md-6{
-                align-self: center;
-            }
-            .tekst{
-                margin: 40px 40px;
-            }
-        }
-
-        @media screen and (max-width: 1100px) {
-            .title{
-                writing-mode: horizontal-tb;
-                font-size: 55px;
-            }
-            .menu{
-                border-right: none;
-                border-top: 1px solid white;
-                justify-content: start;
-            }
-            .row{
-                flex-direction: column;
-            }
-
-        }
-    </style>
-
-</head>
-<body>
-    <div class="all">
-        <div class="row">
-            <div class="col-md-2" style="display: flex; flex-direction: row !important;">
-                <!-- <div class="container"> -->
-                    <div class="title">
-                        DENI VIDAN
-                    </div>
-                </div>
-            <div class="col-md-4">
-                    <!-- <hr style="margin: 0px 30px;"> -->
-                    <div class="menu">
-                        <a href="index.html"><div class="select">UPOZNAJ ME</div></a>
-                        <a href="work.html"><div class="select">DJELA</div></a>
-                        <a href="kontakt.html"><div class="select">KONTAKT</div></a>
-                    </div>
-                </div>
-                <!-- </div> -->
-            
-
-            <div class="col-md-6" style="display: flex; flex-direction: row;">
-                <div class="tekst">
-                    <p>
-                        Ja sam Deni Vidan student Fakulteta Informatike u Puli, imam 21 godinu i trenutno 
-                        polažem 3. godinu preddiplomskog studija. Na ovoj stranici možete vidjeti moj 
-                        rad te ako Vas zanima imate i moj kontakt.
-                    </p>
-                    <p><img class="slika" src="slike/Untitled-1.png" alt="" width="200px"></p>
-                </div>
+    <!-- style -->
+    <link rel="stylesheet" type="text/css" href="style.css" />
+    <!-- BULMA for navbar -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css"
+    />
+    <!-- font awesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+      integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+  </head>
+  <body>
+    <div class="flex-container">
+      <nav class="navbar" role="navigation" aria-label="main navigation">
+        <div class="navbar-brand" style="flex: 5">
+          <div style="display: flex; justify-content: space-between; flex: 8">
+            <a class="navbar-title"> DV. </a>
+            <div class="navbar-item">
+              <a class="secondary-button button">
+                <strong>Contact me</strong>
+              </a>
             </div>
+          </div>
+          <a
+            role="button"
+            style="flex: 1"
+            class="navbar-burger"
+            aria-label="menu"
+            aria-expanded="false"
+            data-target="navbarBasicExample"
+          >
+            <span aria-hidden="true"></span>
+            <span aria-hidden="true"></span>
+            <span aria-hidden="true"></span>
+          </a>
         </div>
+
+        <div id="navbarBasicExample" class="navbar-menu" style="flex: 3">
+          <div class="navbar-start">
+            <a class="navbar-item"> Skills </a>
+
+            <a class="navbar-item"> Work </a>
+
+            <a class="navbar-item"> Services </a>
+
+            <a class="navbar-item"> About me </a>
+          </div>
+        </div>
+      </nav>
+
+      <div class="section-one section-padding bg-one">
+        <div class="hero">
+          <div class="name-item padding-tb-medium">
+            <span class="text-size-small">Name</span> <br />
+            <span class="text-size-hero">DENI VIDAN</span>
+          </div>
+          <div class="age-uni-wrap">
+            <div class="age-item padding-tb-medium">
+              <span class="text-size-small">Age</span> <br />
+              <span class="text-size-hero">23</span>
+            </div>
+            <div class="uni-item padding-tb-medium">
+              <i
+                style="align-self: center"
+                class="fa-solid fa-user-graduate text-size-huge"
+              ></i>
+              <span class="text-size-med_sm width-60 ml-4"
+                >FACULTY OF INFORMATICS IN PULA</span
+              >
+            </div>
+          </div>
+          <div>
+            <button class="primary-button text-size-smaller margin-tb-medium">
+              CONTACT ME
+            </button>
+          </div>
+        </div>
+        <div class="hero-images">
+          <div class="hero-circle"></div>
+          <div class="hero-img">
+            <img src="./assets/MaskaDeni.png" alt="" />
+          </div>
+        </div>
+      </div>
+      <div class="section-two section-padding bg-two">
+        <div class="section-title jcc">
+          <div class="bg-title text-size-huge lh100">MY SKILLS</div>
+          <div class="main-title text-size-medium pa lh100">MY SKILLS</div>
+        </div>
+
+        <div class="padding-tb-big">
+          <div class="skill-wrapper">
+            <!-- skill 1 -->
+            <div class="skill-item">
+              <div class="skill-image">
+                <img
+                  src="https://www.10bestdesign.com/blog/content/images/2018/03/20.png"
+                  width="45px"
+                  alt=""
+                />
+              </div>
+              <div class="skill-content">
+                <div class="skill-first">
+                  <div class="skill-title text-size-small">HTML, CSS, JS</div>
+                  <div class="skill-percentage text-size-smaller">90%</div>
+                </div>
+                <div class="skill-second">
+                  <div class="line-empty"><div class="line-filled"></div></div>
+                  
+                </div>
+              </div>
+            </div>
+            <!-- skill 2 -->
+            <div class="skill-item">
+              <div class="skill-first">
+                <div class="skill-title"></div>
+                <div class="skill-percentage"></div>
+              </div>
+              <div class="skill-second">
+                <div class="line-empty"><div class="line-filled"></div></div>
+                
+              </div>
+            </div>
+            <!-- skill 3 -->
+            <div class="skill-item">
+              <div class="skill-first">
+                <div class="skill-title"></div>
+                <div class="skill-percentage"></div>
+              </div>
+              <div class="skill-second">
+                <div class="line-empty"><div class="line-filled"></div></div>
+                
+              </div>
+            </div>
+            <!-- skill 4 -->
+            <div class="skill-item">
+              <div class="skill-first">
+                <div class="skill-title"></div>
+                <div class="skill-percentage"></div>
+              </div>
+              <div class="skill-second">
+                <div class="line-empty"><div class="line-filled"></div></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
-</body>
+
+    <script src="index.js"></script>
+  </body>
 </html>
