@@ -36,7 +36,7 @@
           <div style="display: flex; justify-content: space-between; flex: 8">
             <a class="navbar-title"> DV. </a>
             <div class="navbar-item">
-              <a class="secondary-button button">
+              <a class="secondary-button button" href="#contact-me">
                 <strong>Contact me</strong>
               </a>
             </div>
@@ -57,13 +57,13 @@
 
         <div id="navbarBasicExample" class="navbar-menu" style="flex: 3">
           <div class="navbar-start">
-            <a class="navbar-item"> Skills </a>
+            <a class="navbar-item is-active" href="#skills"> Skills </a>
 
-            <a class="navbar-item"> Work </a>
+            <a class="navbar-item" href="#work"> Work </a>
 
-            <a class="navbar-item"> Services </a>
+            <a class="navbar-item" href="#services"> Services </a>
 
-            <a class="navbar-item"> About me </a>
+            <a class="navbar-item" href="#about"> About me </a>
           </div>
         </div>
       </nav>
@@ -94,7 +94,7 @@
               style="opacity: 1"
               class="primary-button text-size-smaller margin-tb-medium"
             >
-              CONTACT ME
+              <strong>CONTACT ME</strong>
             </button>
           </div>
         </div>
@@ -105,7 +105,7 @@
           </div>
         </div>
       </div>
-      <div class="section-two section-padding bg-two">
+      <div id="skills" class="section-two section-padding bg-two">
         <div class="section-title jcc">
           <div class="bg-title text-size-huge lh100">MY SKILLS</div>
           <div class="main-title text-size-medium pa lh100">MY SKILLS</div>
@@ -333,7 +333,7 @@
       </div>
 
       <!-- --------------- sectiono 3 ---------- -->
-      <div class="section-three section-padding bg-one">
+      <div id="work" class="section-three section-padding bg-one">
         <div class="section-title jcc">
           <div class="bg-title text-size-huge lh100">MY WORK</div>
           <div class="main-title text-size-medium pa lh100">MY WORK</div>
@@ -373,7 +373,7 @@
       </div>
 
       <!-- --------------- sectiono 4 ---------- -->
-      <div class="section-four section-padding bg-two">
+      <div id="services" class="section-four section-padding bg-two">
         <div class="section-title jcc">
           <div class="bg-title text-size-huge lh100">SERVICES</div>
           <div class="main-title text-size-medium pa lh100">SERVICES</div>
@@ -431,7 +431,7 @@
       </div>
 
       <!-- --------------- sectiono 5 ---------- -->
-      <div class="section-five section-padding bg-three">
+      <div id="call-to-action" class="section-five section-padding bg-three">
         <div class="section-title jcc">
           <div
             style="color: black; opacity: 0.08; white-space: nowrap"
@@ -446,16 +446,14 @@
             HAVE ANY IDEA IN YOUR MIND?
           </div>
         </div>
-        <div class="call-to-action-wrapper padding-tb-big jcc">
-          <button
-            class="primary-button text-size-small hire-me-button"
-          >
+        <div class="call-to-action-wrapper padding-tb-big pb-0 jcc">
+          <button class="primary-button text-size-small important-button">
             HIRE ME
           </button>
         </div>
       </div>
 
-      <div class="section-six section-padding bg-one">
+      <div id="about" class="section-six section-padding bg-one">
         <div class="section-title jcc">
           <div class="bg-title text-size-huge lh100">ABOUT ME</div>
           <div class="main-title text-size-medium pa lh100">ABOUT ME</div>
@@ -464,9 +462,95 @@
           <div class="about-img">
             <img src="/assets/about-image.png" alt="" />
           </div>
-          <div class="about-content text-size-smaller">Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni repellat accusantium, voluptates unde, velit consequatur quo quasi repudiandae harum possimus nam modi veritatis voluptate aut! Fugit voluptatum modi voluptates dolor aut omnis soluta iusto nulla unde laudantium sint, voluptatibus inventore earum beatae quisquam repudiandae magnam facilis deserunt sequi tempore facere fugiat. Error, explicabo. Atque iusto animi culpa dolore eius!</div>
+          <div class="about-content text-size-smaller">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni
+            repellat accusantium, voluptates unde, velit consequatur quo quasi
+            repudiandae harum possimus nam modi veritatis voluptate aut! Fugit
+            voluptatum modi voluptates dolor aut omnis soluta iusto nulla unde
+            laudantium sint, voluptatibus inventore earum beatae quisquam
+            repudiandae magnam facilis deserunt sequi tempore facere fugiat.
+            Error, explicabo. Atque iusto animi culpa dolore eius!
+          </div>
         </div>
       </div>
+
+      <div id="contact-me" class="section-six section-padding bg-two">
+        <div class="section-title jcc">
+          <div
+            style="white-space: nowrap"
+            class="bg-title text-size-huge lh100"
+          >
+            CONTACT ME
+          </div>
+          <div class="main-title text-size-medium pa lh100">CONTACT ME</div>
+        </div>
+        <div class="contact-form padding-tb-big">
+          <form
+            oninput="formChange(event)"
+            action="https://formspree.io/f/mnqkkyrp"
+            method="POST"
+          >
+            <input type="name" name="Name" placeholder="Full name" />
+            <input type="email" name="_replyto" placeholder="E-mail" />
+            <select name="service" id="service">
+              <option value="" disabled selected>Select your option</option>
+              <option value="WEBSITE">WEBSITE</option>
+              <option value="WEBSITE (blog, store)">
+                WEBSITE (blog, store)
+              </option>
+              <option value="WEB APPLICATION">WEB APPLICATION</option>
+              <option value="PHOTO EDITING">PHOTO EDITING</option>
+              <option value="VIDEO EDITING">VIDEO EDITING</option>
+              <option value="DESIGN">DESIGN (web, logo, product)</option>
+            </select>
+            <div style="width:100%; display:flex; justify-content: flex-end;"><div style="position: absolute; margin-top: 18px; margin-right: 3px;">*OPTIONAL</div></div>
+            
+            <textarea
+              name="Message"
+              id=""
+              cols="30"
+              rows="4"
+              placeholder="Write Something..."
+            ></textarea>
+            <div class="err">*Please, enter all needed fields correctly</div>
+            <button
+              onclick="checkFormFilled(event)"
+              class="submitFormBtn btn button important-button"
+              type="submit"
+              disabled
+            >
+              SEND
+            </button>
+          </form>
+        </div>
+      </div>
+
+      <footer>
+        <div class="footer-wrapper">
+          <div class="footer-1">
+            <div class="title-wrapper tac">
+              <a class="pl-0 navbar-title"> DV. </a>
+            </div>
+            <div class="footer-social-media">
+              <a href="https://www.instagram.com/denividan" target="_blank"><img width="40px" src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e7/Instagram_logo_2016.svg/2048px-Instagram_logo_2016.svg.png" alt=""></a>
+              <a href="https://www.facebook.com/deninedenined/" target="_blank"><img width="40px" src="https://upload.wikimedia.org/wikipedia/commons/6/6c/Facebook_Logo_2023.png" alt=""></a>
+            </div>
+          </div>
+          <div class="footer-2">
+            We take care of reservations at your restaurant, we are the fastest
+            and most elegant. Delight your guests, contact us now!
+          </div>
+          <div class="footer-3">
+            <button
+              type="button"
+              class="button secondary-button"
+              onclick="window.location='#contact'"
+            >
+              <strong>Contact me</strong>
+            </button>
+          </div>
+        </div>
+      </footer>
     </div>
 
     <script src="index.js"></script>
@@ -493,6 +577,33 @@
           prevEl: ".swiper-button-prev",
         },
       });
+
+      function formChange(event) {
+        const nameInput = event.target.form[0];
+        const emailInput = event.target.form[1];
+        const textInput = event.target.form[3];
+
+        const submitBtn = document.getElementsByClassName("submitFormBtn")[0];
+
+        if (
+          emailInput.value !== "" &&
+          isValidEmail(emailInput.value) &&
+          nameInput.value !== ""
+        ) {
+          submitBtn.disabled = false;
+          document.getElementsByClassName("err")[0].style.display = "none"
+        } else {
+          submitBtn.disabled = true;
+        }
+      }
+
+      function isValidEmail(email) {
+        // Regular expression for a valid email address
+        const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+        // Test the email against the regex
+        return emailRegex.test(email);
+      }
     </script>
   </body>
 </html>
