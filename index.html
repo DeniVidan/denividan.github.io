@@ -7,7 +7,8 @@
       name="viewport"
       content="width=device-width, initial-scale=1.0, minimum-scale=1, maximum-scale=1"
     />
-    <title>Document</title>
+    <title>Deni's Portfolio</title>
+    <link rel="icon" href="/assets/MaskaDeni.png" />
     <!-- style -->
     <link rel="stylesheet" type="text/css" href="style.css" />
     <!-- BULMA for navbar -->
@@ -35,8 +36,12 @@
         <div class="navbar-brand" style="flex: 5">
           <div style="display: flex; justify-content: space-between; flex: 8">
             <a class="navbar-title"> DV. </a>
-            <div class="navbar-item">
-              <a class="secondary-button button" href="#contact-me">
+            <div class="navbar-item navbar-item-contact">
+              <a
+                onclick="contactClicked()"
+                class="secondary-button button"
+                href="#contact-me"
+              >
                 <strong>Contact me</strong>
               </a>
             </div>
@@ -57,7 +62,7 @@
 
         <div id="navbarBasicExample" class="navbar-menu" style="flex: 3">
           <div class="navbar-start">
-            <a class="navbar-item is-active" href="#skills"> Skills </a>
+            <a class="navbar-item" href="#skills"> Skills </a>
 
             <a class="navbar-item" href="#work"> Work </a>
 
@@ -91,6 +96,7 @@
           </div>
           <div>
             <button
+              onclick="contactClicked()"
               style="opacity: 1"
               class="primary-button text-size-smaller margin-tb-medium"
             >
@@ -447,7 +453,10 @@
           </div>
         </div>
         <div class="call-to-action-wrapper padding-tb-big pb-0 jcc">
-          <button class="primary-button text-size-small important-button">
+          <button
+            class="primary-button text-size-small important-button"
+            onclick="contactClicked()"
+          >
             HIRE ME
           </button>
         </div>
@@ -463,13 +472,12 @@
             <img src="/assets/about-image.png" alt="" />
           </div>
           <div class="about-content text-size-smaller">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni
-            repellat accusantium, voluptates unde, velit consequatur quo quasi
-            repudiandae harum possimus nam modi veritatis voluptate aut! Fugit
-            voluptatum modi voluptates dolor aut omnis soluta iusto nulla unde
-            laudantium sint, voluptatibus inventore earum beatae quisquam
-            repudiandae magnam facilis deserunt sequi tempore facere fugiat.
-            Error, explicabo. Atque iusto animi culpa dolore eius!
+            My name is <span style="color: #8fff00">Deni.</span> <br>
+            - My goal? <br>
+            <span style="color: #8fff00">Your happiness!</span> <br>
+            - How? <br>
+            <span style="color: #8fff00">Pure, relentless hard work.</span> Bet on it—I guarantee
+            results.
           </div>
         </div>
       </div>
@@ -503,8 +511,14 @@
               <option value="VIDEO EDITING">VIDEO EDITING</option>
               <option value="DESIGN">DESIGN (web, logo, product)</option>
             </select>
-            <div style="width:100%; display:flex; justify-content: flex-end;"><div style="position: absolute; margin-top: 18px; margin-right: 3px;">*OPTIONAL</div></div>
-            
+            <div style="width: 100%; display: flex; justify-content: flex-end">
+              <div
+                style="position: absolute; margin-top: 18px; margin-right: 3px"
+              >
+                *OPTIONAL
+              </div>
+            </div>
+
             <textarea
               name="Message"
               id=""
@@ -532,19 +546,35 @@
               <a class="pl-0 navbar-title"> DV. </a>
             </div>
             <div class="footer-social-media">
-              <a href="https://www.instagram.com/denividan" target="_blank"><img width="40px" src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e7/Instagram_logo_2016.svg/2048px-Instagram_logo_2016.svg.png" alt=""></a>
-              <a href="https://www.facebook.com/deninedenined/" target="_blank"><img width="40px" src="https://upload.wikimedia.org/wikipedia/commons/6/6c/Facebook_Logo_2023.png" alt=""></a>
+              <a href="https://www.instagram.com/denividan" target="_blank"
+                ><img
+                  width="40px"
+                  src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e7/Instagram_logo_2016.svg/2048px-Instagram_logo_2016.svg.png"
+                  alt=""
+              /></a>
+              <a href="https://www.facebook.com/deninedenined/" target="_blank"
+                ><img
+                  width="40px"
+                  src="https://upload.wikimedia.org/wikipedia/commons/6/6c/Facebook_Logo_2023.png"
+                  alt=""
+              /></a>
             </div>
           </div>
           <div class="footer-2">
-            We take care of reservations at your restaurant, we are the fastest
-            and most elegant. Delight your guests, contact us now!
+            If I am willing to do best for you, you should be willing to do the
+            same for you.
+            <a
+              onclick="contactClicked()"
+              href="#contact-me"
+              style="color: #8fff00"
+              >Let's talk!</a
+            >
           </div>
           <div class="footer-3">
             <button
               type="button"
               class="button secondary-button"
-              onclick="window.location='#contact'"
+              onclick="contactClicked()"
             >
               <strong>Contact me</strong>
             </button>
@@ -591,7 +621,7 @@
           nameInput.value !== ""
         ) {
           submitBtn.disabled = false;
-          document.getElementsByClassName("err")[0].style.display = "none"
+          document.getElementsByClassName("err")[0].style.display = "none";
         } else {
           submitBtn.disabled = true;
         }
